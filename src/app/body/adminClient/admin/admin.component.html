@@ -1,0 +1,27 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>Coupon System</span>
+
+    <button mat-button routerLinkActive="active" routerLink="/admin/createCompany">createCompany</button>
+    <button mat-button routerLinkActive="active" routerLink="/admin/deleteCompany">deleteCompany</button>
+    <button mat-button routerLinkActive="active" routerLink="/admin/updateCompany">updateCompany</button>
+    <button mat-button routerLinkActive="active" routerLink="/admin/readCompany">readCompany</button>
+    <button mat-button routerLinkActive="active" routerLink="/admin/readCompanies">readCompanies</button>
+    <button mat-button (click)="logout()" >Logout</button>
+  </mat-toolbar-row>
+  
+  <mat-toolbar-row>
+    <button mat-button routerLinkActive="active" routerLink="/admin/createCustomer">createCustomer</button>
+    <button mat-button routerLinkActive="active" routerLink="/admin/deleteCustomer">deleteCustomer</button>
+    <button mat-button routerLinkActive="active" routerLink="/admin/updateCustomer">updateCustomer</button>
+    <button mat-button routerLinkActive="active" routerLink="/admin/readCustomer">readCustomer</button>
+    <button mat-button routerLinkActive="active" routerLink="/admin/readCustomers">readCustomers</button>
+    
+  </mat-toolbar-row>
+  
+
+</mat-toolbar>
+
+<div>
+  <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,21 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <span>Coupon System</span>
+  
+      <button mat-button routerLinkActive="active" routerLink="/company/createCoupon" (click)="toggleUser()" >createCoupon</button>
+      <button mat-button routerLinkActive="active" routerLink="/company/deleteCoupon" (click)="toggleUser()" >deleteCoupon</button>
+      <button mat-button routerLinkActive="active" routerLink="/company/updateCoupon" (click)="toggleUser()" >updateCoupon</button>
+      <button mat-button routerLinkActive="active" routerLink="/company/readCoupon" (click)="toggleUser()" >readCoupon</button>
+      <button mat-button routerLinkActive="active" routerLink="/company/readAllCoupons" (click)="toggleUser()" >readAllCoupons</button>
+      <button mat-button (click)="logout()" >Logout</button>
+    </mat-toolbar-row>
+  
+  </mat-toolbar>
+
+  <div *ngIf="showUser" class="Welcome" >
+Welcome back {{uname}}!
+  </div>
+
+  <div>
+    <router-outlet></router-outlet>
+  </div>

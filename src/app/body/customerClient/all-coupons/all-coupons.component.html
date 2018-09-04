@@ -1,0 +1,18 @@
+<mat-grid-list cols="3"  >
+  <mat-grid-tile class="mat-elevation-z1" *ngFor="let coup of LocalCoupons.coupon" >
+    <mat-card>
+      <mat-card-header>
+        <mat-card-subtitle>Coupon #{{coup.id}}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p> Title : {{coup.title}} </p>
+        <p> Amount : {{coup.amount}} </p>
+        <p> EndDate : {{coup.endDate | date}} </p>
+        <p> Message : {{coup.message}} </p>
+        <p> Price : {{coup.price}} </p>
+        <p> StartDate : {{coup.startDate | date}} </p>
+        <p> Type : {{coup.type}} </p>
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>

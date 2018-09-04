@@ -1,0 +1,18 @@
+  <mat-form-field>
+      <input matInput #compID type="number" placeholder="Company ID" >
+    </mat-form-field>   
+    <button mat-stroked-button color="primary" (click)="readCompany(compID.value)" >Search</button>
+
+    <mat-card class="align-card" *ngIf="showCompany && selectedCompany.selected.compName != undefined" >
+        <mat-card-header>
+          <mat-card-subtitle>Company #{{selectedCompany.selected.id }}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <p> Name : {{selectedCompany.selected.compName }}</p>
+            <p> Email : {{selectedCompany.selected.email }} </p>
+            <p> Password : {{selectedCompany.selected.password }} </p>
+        </mat-card-content>
+      </mat-card>
+
+    
+    

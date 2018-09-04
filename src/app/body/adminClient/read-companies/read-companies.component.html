@@ -1,0 +1,19 @@
+<table class="table table-bordered mat-elevation-z8" >
+  <thead class="mat-elevation-z1">
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+      <th>Password</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let comp of LocalCompanies.company">
+      <td>{{comp.id}}</td>
+      <td>{{comp.compName}}</td>
+      <td>{{comp.password}}</td>
+      <td>{{comp.email}}</td>
+    </tr>
+  </tbody>
+</table>
+<br/>

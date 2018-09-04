@@ -1,0 +1,82 @@
+<div class="container py-3">
+  <div class="row">
+      <div class="mx-auto col-sm-6">
+                  <!-- form user info -->
+                  <div class="card">
+                      <div class="card-header">
+                          <h4 class="mb-0">Create Coupon</h4>
+                      </div>
+                      <div class="card-body">
+                          <form class="form" role="form" autocomplete="off">
+                              <div class="form-group row">
+                                  <label class="col-lg-3 col-form-label form-control-label">Coupon Title</label>
+                                  <div class="col-lg-9">
+                                      <input class="form-control" type="text" placeholder="Enter Coupon Title" #coupTitle />
+                                  </div>
+                              </div>
+                              <div class="form-group row">
+                                <label class="col-lg-3 col-form-label form-control-label">Start Date</label>
+                                <div class="col-lg-9">
+                                    <input class="form-control" type="date" placeholder="Enter End Date" #startDate />
+                                </div>
+                            </div>
+                              <div class="form-group row">
+                                  <label class="col-lg-3 col-form-label form-control-label">Amount</label>
+                                  <div class="col-lg-9">
+                                      <input class="form-control" type="number" placeholder="Enter Amount" #amount />
+                                  </div>
+                              </div>
+                              <div class="form-group row">
+                                <label class="col-lg-3 col-form-label form-control-label">Image</label>
+                                <div class="col-lg-9">
+                                    <input class="form-control" type="text" placeholder="Enter Image" #image />
+                                </div>
+                            </div>
+                              <div class="form-group row">
+                                <label class="col-lg-3 col-form-label form-control-label">Message</label>
+                                <div class="col-lg-9">
+                                    <input class="form-control" type="text" placeholder="Enter Message" #message />
+                                </div>
+                            </div>
+                              <div class="form-group row">
+                                <label class="col-lg-3 col-form-label form-control-label">Price</label>
+                                <div class="col-lg-9">
+                                    <input class="form-control" type="number" placeholder="Enter Price" #price />
+                                </div>
+                            </div>
+                              <div class="form-group row">
+                                <label class="col-lg-3 col-form-label form-control-label">Type</label>
+                                <div class="col-lg-9">
+                                  <select  class="form-control" name="Type" #type>
+                                    <option value="RESTURANS">RESTURANS</option>
+                                    <option value="ELECTRICITY">ELECTRICITY</option>
+                                    <option value="FOOD">FOOD</option>
+                                    <option value="HEALTH">HEALTH</option>
+                                    <option value="SPORTS">SPORTS</option>
+                                    <option value="CAMPING">CAMPING</option>
+                                    <option value="TRAVELLING">TRAVELLING</option>
+                                    <option value="HOBBY">HOBBY</option>
+                                    <option value="CLOTHING">CLOTHING</option>
+                                  </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                              <label class="col-lg-3 col-form-label form-control-label">End Date</label>
+                              <div class="col-lg-9">
+                                  <input class="form-control" type="date" placeholder="Enter End Date" #endDate />
+                              </div>
+                          </div>
+                              <div class="form-group row">
+                                  <label class="col-lg-3 col-form-label form-control-label"></label>
+                                  <div class="col-lg-9">
+                                      <input type="reset" class="btn btn-secondary" value="Reset" />
+                                      <input type="button" class="btn btn-primary" value="Create" (click)="createCoup(amount.value, endDate.value, image.value, message.value, price.value, startDate.value, coupTitle.value, type.value)" />
+                                  </div>
+                              </div>
+                          </form>
+                      </div>
+                  </div>
+                  <!-- /form user info -->
+      </div>
+  </div>
+</div>

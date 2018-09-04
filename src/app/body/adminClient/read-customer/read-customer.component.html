@@ -1,0 +1,15 @@
+<mat-form-field>
+    <input matInput #custID type="number" placeholder="Customer ID" >
+  </mat-form-field>   
+  <button mat-stroked-button color="primary" (click)="readCustomer(custID.value)" >Search</button>
+
+  <mat-card class="align-card" *ngIf="showCustomer && selectedCustomer.selected.custName != undefined" >
+      <mat-card-header>
+        <mat-card-subtitle>Customer #{{selectedCustomer.selected.id}}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+          <p> Name : {{selectedCustomer.selected.custName}} </p>
+          <p> Password : {{selectedCustomer.selected.password}} </p>
+      </mat-card-content>
+    </mat-card>
+

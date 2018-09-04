@@ -1,0 +1,17 @@
+<table class="table table-bordered mat-elevation-z8" >
+    <thead class="mat-elevation-z1">
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Password</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cust of LocalCustomers.customer">
+        <td>{{cust.id}}</td>
+        <td>{{cust.custName}}</td>
+        <td>{{cust.password}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <br/>

@@ -1,0 +1,70 @@
+  <table class="table table-bordered mat-elevation-z8" *ngIf="showTable" >
+    <thead>
+      <button mat-button (click)="toggle()" ><mat-icon>search</mat-icon></button>
+      <tr class="mat-elevation-z1">
+        <th>#</th>
+        <th>Title</th>
+        <th>Type</th>
+        <th>StartDate</th>
+        <th>EndDate</th>
+        <th>Price</th>
+        <th>Message</th>
+        <th>Amount</th>
+      </tr>
+    </thead>
+
+    <tbody *ngIf="(LocalCoupons.coupon).length>1" >
+        <tr *ngFor="let coup of LocalCoupons.coupon">
+          <td>{{coup.id}}</td>
+          <td>{{coup.title}}</td>
+          <td>{{coup.type}}</td>
+          <td>{{coup.startDate | date}}</td>
+          <td>{{coup.endDate | date }}</td>
+          <td>{{coup.price}}</td>
+          <td>{{coup.message}}</td>
+          <td>{{coup.amount}}</td>
+        </tr>
+      </tbody>
+    
+      <tbody *ngIf="!((LocalCoupons.coupon).length>1)" >
+        <tr >
+          <td>{{LocalCoupons.coupon.id}}</td>
+          <td>{{LocalCoupons.coupon.title}}</td>
+          <td>{{LocalCoupons.coupon.type}}</td>
+          <td>{{LocalCoupons.coupon.startDate | date}}</td>
+          <td>{{LocalCoupons.coupon.endDate | date }}</td>
+          <td>{{LocalCoupons.coupon.price}}</td>
+          <td>{{LocalCoupons.coupon.message}}</td>
+          <td>{{LocalCoupons.coupon.amount}}</td>
+        </tr>
+      </tbody>
+
+  </table>
+
+  <mat-card style="text-align: center" *ngIf="showSearch"  >
+      <mat-card-content>
+          <mat-form-field class="">
+              <mat-select placeholder="Select Option" [(value)]="selected" #option>
+                <mat-option value="ALL" >All</mat-option>
+                <mat-option value="PRICE">Price (insert price below)</mat-option>
+                <mat-option value="DISABLED" disabled >Type</mat-option>
+                <mat-option value="RESTURANS">RESTURANS</mat-option>
+                <mat-option value="ELECTRICITY">ELECTRICITY</mat-option>
+                <mat-option value="FOOD">FOOD</mat-option>
+                <mat-option value="HEALTH">HEALTH</mat-option>
+                <mat-option value="SPORTS">SPORTS</mat-option>
+                <mat-option value="CAMPING">CAMPING</mat-option>
+                <mat-option value="TRAVELLING">TRAVELLING</mat-option>
+                <mat-option value="HOBBY">HOBBY</mat-option>
+                <mat-option value="CLOTHING">CLOTHING</mat-option>
+              </mat-select>
+            </mat-form-field>
+            <br />
+            <mat-form-field class="full-width-input" >
+                <input matInput type="number" placeholder="Search Keyword" #query  />
+              </mat-form-field>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="accent" (click)="search(option.value,query.value)" >Search</button>
+      </mat-card-actions>
+    </mat-card>

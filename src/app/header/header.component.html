@@ -1,0 +1,10 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>Coupon System</span>
+    <button mat-button *ngFor="let btn of buttonArr" [routerLink]="btn.route">
+      {{btn.name}}
+     <i *ngIf="btn.icon!=undefined" class="material-icons"> {{btn.icon}} </i>
+    </button>
+  </mat-toolbar-row>
+  
+</mat-toolbar>

@@ -1,0 +1,19 @@
+<mat-form-field>
+  <input matInput #coupID type="number" placeholder="Coupon ID">
+</mat-form-field>
+<button mat-stroked-button color="primary" (click)="readCoupon(coupID.value)">Search</button>
+
+<mat-card class="align-card" *ngIf="showCoupon && selectedCoupon.selected.title != undefined">
+  <mat-card-header>
+    <mat-card-subtitle>Coupon #{{selectedCoupon.selected.id}}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <p> Title : {{selectedCoupon.selected.title}} </p>
+    <p> Amount : {{selectedCoupon.selected.amount}} </p>
+    <p> EndDate : {{selectedCoupon.selected.endDate | date}} </p>
+    <p> Message : {{selectedCoupon.selected.message}} </p>
+    <p> Price : {{selectedCoupon.selected.price}} </p>
+    <p> StartDate : {{selectedCoupon.selected.startDate | date}} </p>
+    <p> Type : {{selectedCoupon.selected.type}} </p>
+  </mat-card-content>
+</mat-card>

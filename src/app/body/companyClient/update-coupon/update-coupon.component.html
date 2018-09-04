@@ -1,0 +1,42 @@
+<div class="container py-3">
+  <div class="row">
+      <div class="mx-auto col-sm-6">
+                  <!-- form user info -->
+                  <div class="card">
+                      <div class="card-header">
+                          <h4 class="mb-0">Update Coupon</h4>
+                      </div>
+                      <div class="card-body">
+                          <form class="form" role="form" autocomplete="off">
+                              <div class="form-group row">
+                                  <label class="col-lg-3 col-form-label form-control-label">Coupon ID</label>
+                                  <div class="col-lg-9">
+                                      <input class="form-control" type="number" placeholder="Enter Company ID" #id />
+                                  </div>
+                              </div>
+                              <div class="form-group row">
+                                  <label class="col-lg-3 col-form-label form-control-label">EndDate</label>
+                                  <div class="col-lg-9">
+                                      <input class="form-control" type="date" placeholder="Enter Date" #date />
+                                  </div>
+                              </div>
+                              <div class="form-group row">
+                                <label class="col-lg-3 col-form-label form-control-label">Price</label>
+                                <div class="col-lg-9">
+                                    <input class="form-control" type="number" placeholder="Enter Price" #price />
+                                </div>
+                            </div>
+                              <div class="form-group row">
+                                  <label class="col-lg-3 col-form-label form-control-label"></label>
+                                  <div class="col-lg-9">
+                                      <input type="reset" class="btn btn-secondary" value="Reset" />
+                                      <input type="button" class="btn btn-primary" value="Update" (click)="updateCoup(id.value,date.value,price.value)" />
+                                  </div>
+                              </div>
+                          </form>
+                      </div>
+                  </div>
+                  <!-- /form user info -->
+      </div>
+  </div>
+</div>
